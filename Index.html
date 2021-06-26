@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+  <p id="string">ROTATING-WORD</p>
+
+<script type="text/javascript" charset="utf-8">
+  function rotate(){
+  var str = document.getElementById("string");
+  let text = str.innerText;
+  setInterval(function(){
+  text = text[text.length - 1] + text.slice(0, -1);
+  str.innerText = text;
+  }, 500);
+  }
+  rotate();
+</script>
+</body>
+
+</html>
